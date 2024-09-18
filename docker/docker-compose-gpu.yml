@@ -25,6 +25,8 @@ services:
       - TZ=${TIMEZONE}
       - HF_ENDPOINT=https://huggingface.co
       - MACOS=${MACOS}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - ragflow
     restart: always
